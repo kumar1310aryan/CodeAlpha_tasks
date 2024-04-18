@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, black,#170d04,#2c1401,#6b370f);
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+ .right-strip {
+  position: absolute;
+  width: 1px;
+  height: 100vh;
+  background: #D35A08;
+  z-index: -1;
+}
+
+.right-strip { right: 100px; }
+
+.middle-strip {
+  position: absolute;
+  width: 70px;
+  height: 2000px;
+  background: #D35A08;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  transform: rotate(40deg);
+  z-index: -1;
+  opacity: .2;
+  margin-top: -300px;
+}
+
+
+.person img {
+  position: absolute;
+  bottom: 0;
+  margin-left: 50px;
+  z-index: 1;
+  mix-blend-mode: color-dodge;
+  width: 450px;
+  height: 800px;
+}
+
+.content {
+  position: absolute;
+  top: 25%;
+  left: 48%;
+  width: 40%;
+}
+
+@font-face {
+  font-family: 'KreepTown';
+  font-style: normal;
+  font-weight: normal;
+  src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype')
+}
+
+
+.content p {
+  color: wheat;
+  margin: 0;
+  font-family: 'KreepTown';
+  font-size: 40px;
+}
+
+.content h1 {
+  margin: 0;
+  font-family: 'KreepTown';
+  font-size: 80px;
+  color: #D35A08;
+  letter-spacing: 3px;
+}
+
+.content button {
+  display: inline-block;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  margin-top: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+.btn-1 {
+  background: #01B1E7;
+  color: #000F18;
+  padding: 20px 60px;
+  border: none;
+  margin-right: 20px;
+}
+
+.btn-1:hover {
+  background: #D35A08;
+}
+
+.btn-2 {
+  background: transparent;
+  color: #D35A08;
+  padding: 20px 35px;
+  border: 1px solid #D35A08;
+}
+
+.btn-2:hover {
+  background: #e2a372;
+  border: 1px solid #e70101;
+  color: #ffffff;
+}
+
+
+.bottomnav {
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+
+.bottomnav-title {
+  font-size: large;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.bottomnav-title::before {
+  display: inline-block;
+  content: "";
+  border-top: 2px solid #D35A08;
+  width: 65px;
+  margin: 0 20px 0 0;
+  transform: translateY(-5px);
+}
+
+.bottomnav img {
+  width: 300px;
+  height: auto;
+  mix-blend-mode: color-dodge;
+}
+
+.bottomnav ul {
+  list-style: none;
+}
+
+.bottomnav ul li {
+  position: absolute;
+  padding: 15px 18px;
+  font-size: 12px;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+
+.bottomnav ul li:nth-child(1) {
+  right: -20px;
+  bottom: 115px;
+  background: #D35A08;
+  border: 1px solid #D35A08;
+  color: #fff;
+  border: 1px solid #3b0e02;
+}
+
+.bottomnav ul li:nth-child(1):hover {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #391b07;
+}
+
+.bottomnav ul li:nth-child(2) {
+  right: -20px;
+  bottom: 35px;
+  background: #D35A08;
+  border: 1px solid #3b0e02;
+  color:#fff;
+}
+
+.bottomnav ul li:nth-child(2):hover {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #481508;
+}
+

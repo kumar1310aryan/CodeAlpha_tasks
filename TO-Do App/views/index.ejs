@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <div class="container" id="fade-in">
+        <div id="alertMessage" class="alert">&#x26A0</div>
+        <div class="todo-app">
+            <h2>To-Do List <img src="images/icons.png" alt="todo"></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your task">
+
+                <input type="date" id="dueDate" />
+
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+                
+                
+            </ul>
+        </div>
+        <button class="history-button" id="fade-in"  onclick="window.location.href='/tasks/history'">Show History</button>
+    </div>
+    
+<script>
+        
+const inputbox=document.getElementById("input-box");
+const listcontainer=document.getElementById("list-container");
+let tasks = [];
+
+
+function addTask(){
+
+    var today=new Date();
+    var dd=String(today.getDate()).padStart(2,'0');
+    var mm=String(today.getMonth()+1).padStart(2,'0');
+    var yyyy=today.getFullYear();
+
+    today=yyyy+ '-' + mm + '-' + dd;
+    
+
+    if(inputbox.value===''){
+        showAlert("  First add a Task...");
+    }else{
+        let dueDate=document.getElementById("dueDate");
+        let li=document.createElement("li");
+        if(dueDate.value===''){
+            var taskText=document.createTextNode(inputbox.value+ "  - Due: "+ today);
+        }else{
+            var taskText=document.createTextNode(inputbox.value+ "  - Due: "+ dueDate.value);
+        }
+        // li.innerHTML=inputbox.value;
+        li.appendChild(taskText);
+        listcontainer.appendChild(li);
+        
+        let span=document.createElement("span");
+        span.innerHTML="\u00d7";
+        li.appendChild(span);
+    }
+    inputbox.value='';
+    dueDate.value='';
+    saveData();
+}
+
+listcontainer.addEventListener("click",function(e){
+    if(e.target.tagName ==="LI"){
+        e.target.classList.toggle("checked");
+        saveData();
+    }
+    else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        saveData();
+    }
+},false);
+
+function saveData(){
+    localStorage.setItem("data",listcontainer.innerHTML);
+}
+
+function showData(){
+    listcontainer.innerHTML=localStorage.getItem("data");
+}
+
+
+function showAlert(message){
+    var alert=document.getElementById("alertMessage");
+    alert.innerText=message;
+    alert.style.display="flex";
+
+    setTimeout(function(){
+        alert.style.display="none";
+    },2300);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var elements = document.querySelectorAll('#fade-in');
+    elements.forEach(function(element){
+        element.classList.add('show');
+    });
+});
+
+showData();
+
+
+// function addTask() {
+//     var today = new Date();
+//     var dd = String(today.getDate()).padStart(2, '0');
+//     var mm = String(today.getMonth() + 1).padStart(2, '0');
+//     var yyyy = today.getFullYear();
+
+//     today = yyyy + '-' + mm + '-' + dd;
+
+//     if (inputbox.value === '') {
+//         showAlert("  First add a Task...");
+//     } else {
+//         let dueDate = document.getElementById("dueDate");
+//         let taskText;
+//         if (dueDate.value === '') {
+//             taskText = inputbox.value + "  - Due: " + today;
+//         } else {
+//             taskText = inputbox.value + "  - Due: " + dueDate.value;
+//         }
+//         let task = {
+//             text: inputbox.value,
+//             dueDate: dueDate.value || today
+//         };
+//         tasks.push(text); // Add task to the array
+//         renderTask(text); // Render task in the UI
+//         tasks=[];
+//         saveData();
+//     }
+//     inputbox.value = '';
+//     dueDate.value = '';
+// }
+
+// function renderTask(task) {
+//     let li = document.createElement("li");
+//     let taskText = document.createTextNode(task.text);
+//     let taskDate = document.createTextNode(task.dueDate);
+//     li.appendChild(taskText);
+//     listcontainer.appendChild(li);
+
+//     let span = document.createElement("span");
+//     span.innerHTML = "\u00d7";
+//     li.appendChild(span);
+// }
+
+// listcontainer.addEventListener("click", function (e) {
+//     if (e.target.tagName === "LI") {
+//         e.target.classList.toggle("checked");
+//         saveData();
+//     } else if (e.target.tagName === "SPAN") {
+//         e.target.parentElement.remove();
+//         saveData();
+//     }
+// }, false);
+
+function saveData() {
+    localStorage.setItem("data", listcontainer.innerHTML);
+    localStorage.setItem("tasks", JSON.stringify(tasks)); // Store tasks in localStorage
+}
+
+function showData() {
+    listcontainer.innerHTML = localStorage.getItem("data");
+    let storedTasks = localStorage.getItem("tasks");
+    if (storedTasks) {
+        tasks = JSON.parse(storedTasks); // Retrieve tasks from localStorage
+        tasks.forEach(task => renderTask(task));
+    }
+}
+
+function showAlert(message) {
+    var alert = document.getElementById("alertMessage");
+    alert.innerText = message;
+    alert.style.display = "flex";
+
+    setTimeout(function () {
+        alert.style.display = "none";
+    }, 2300);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    var elements = document.querySelectorAll('#fade-in');
+    elements.forEach(function (element) {
+        element.classList.add('show');
+    });
+});
+
+showData();
+
+
+
+</script>
+</body>
+</html>

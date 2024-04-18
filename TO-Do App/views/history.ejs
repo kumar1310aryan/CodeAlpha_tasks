@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>History</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, black,#170d04,#2c1401,#6b370f);
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+  }
+  
+   .right-strip {
+    position: absolute;
+    width: 1px;
+    height: 100vh;
+    background: #D35A08;
+    z-index: -1;
+  }
+  
+   .right-strip { right: 100px; }
+
+   .heading{
+    color: white;
+    position: absolute;
+    width: 187px;
+    padding-left: 60%;
+    padding-top: 100px;
+
+    /* text-shadow: #D35A08 10px; */
+   }
+  
+  /*.middle-strip {
+    position: absolute;
+    width: 70px;
+    height: 2000px;
+    background: #D35A08;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    transform: rotate(40deg);
+    z-index: -1;
+    opacity: .2;
+    margin-top: -300px;
+  } */
+  
+  
+  .person img {
+    position: absolute;
+    bottom: 0;
+    margin-left: 50px;
+    z-index: 1;
+    mix-blend-mode: color-dodge;
+    width: 450px;
+    height: 800px;
+  }
+  
+  .container {
+    position: absolute;
+    top: 20%;
+    left: 48%;
+    width: 40%;
+  }
+  
+  /* @font-face {
+    font-family: 'KreepTown';
+    font-style: normal;
+    font-weight: normal;
+    src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype')
+  } */
+  
+  
+  /* .content p {
+    color: wheat;
+    margin: 0;
+    font-family: 'KreepTown';
+    font-size: 40px;
+  }
+  
+  .content h1 {
+    margin: 0;
+    font-family: 'KreepTown';
+    font-size: 80px;
+    color: #D35A08;
+    letter-spacing: 3px;
+  }
+   */
+
+   /* body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+   */
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(244, 170, 127, 0.946);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(246, 52, 3, 0.1);
+  }
+  
+  .table-container {
+    max-height: 300px; /* Adjust the height as needed */
+    overflow-y: auto;
+  }
+  
+  .filter-container {
+    margin-bottom: 20px;
+  }
+  
+  .filter-container label {
+    font-weight: bold;
+  }
+  
+  .filter-container input[type="date"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  thead th {
+    background-color: transparent;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: rgba(244, 170, 127, 0.946);
+  }
+  
+  tbody tr:hover {
+    background-color: rgba(248, 148, 9, 0.94);
+    transition: background-color 0.3s ease;
+  }
+  
+
+
+  
+  
+  
+  
+  
+  
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="strips">
+      
+      
+      <div class="right-strip"></div>
+    </div>
+
+    <div class="person">
+      <img src="/images/his-person.jpg" alt="">
+    </div>
+
+    <div class="heading"><h1></h1></div>
+
+    <div class="container">
+
+        <div class="task-input-container">
+            <!-- <label for="task-input">Enter Task:</label> -->
+            <!-- <input type="text" id="task-input">
+            <button id="add-task-btn">Add Task</button>
+            <br> -->
+            
+
+        <h2> Task History</h2>
+        
+        <div class="table-container">
+          <table id="task-table">
+            <thead>
+              <tr>
+                <th>Sno</th>
+                <th>Tasks</th>
+                <th>Due date</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Task 1</td>
+                <td type="date">2024-04-16</td>
+                <td>completed</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Task 2</td>
+                <td>2024-04-20</td>
+                <td>completed</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Task 3</td>
+                <td>2024-04-16</td>
+                <td>pending</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Task 4</td>
+                <td>2024-04-25</td>
+                <td>pending</td>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <!-- Table content will be dynamically added here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      
+
+  </div>
+
+  <script>
+    // Example data
+const tasksData = [];
+  
+  // Function to populate the table with data
+  function populateTable(data) {
+    const tableBody = document.getElementById('table-body');
+    tableBody.innerHTML = '';
+    data.forEach((rowData, index) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${rowData.task}</td>
+        <td>${rowData.dueDate}</td>
+        <td>${rowData.status}</td>
+      `;
+      tableBody.appendChild(row);
+    });
+  }
+  
+  
+  populateTable(tasksData);
+  
+  // Filtering table by due date
+  const dueDateInput = document.getElementById('due-date');
+  dueDateInput.addEventListener('input', function() {
+    const selectedDate = this.value;
+    const filteredData = tasksData.filter(task => task.dueDate === selectedDate);
+    populateTable(filteredData);
+  });
+  
+
+TweenMax.staggerFrom(".sidetext ul li", 2, {
+    x: 40,
+    opacity: 0,
+    ease: Expo.easeInOut
+  }, 0.2)
+
+  TweenMax.from(".person img", 2, {
+    delay: 1,
+    y: 60,
+    opacity: 0,
+    ease: Expo.easeInOut
+  })
+
+  TweenMax.from(".middle-strip", 2, {
+    delay: 1,
+    y: -50,
+    opacity: 0,
+    ease: Expo.easeInOut
+  })
+
+  TweenMax.from(".container", 1.8, {
+    delay: 1.5,
+    y: 20,
+    opacity: 0,
+    ease: Expo.easeInOut
+  })
+
+  TweenMax.from(".content h1", 2, {
+    delay: 1.5,
+    y: 20,
+    opacity: 0,
+    ease: Expo.easeInOut
+  })
+
+  TweenMax.from(".content .btn-2", 1.5, {
+    delay: 1.5,
+    y: 20,
+    opacity: 0,
+    ease: Expo.easeInOut
+  })
+
+  TweenMax.from(".bottomnav-title", 2, {
+    delay: 2,
+    x: 20,
+    opacity: 0,
+    ease: Expo.easeInOut
+  })
+
+  TweenMax.from(".bottomnav-img", 2, {
+    delay: 2,
+    y: 20,
+    opacity: 0,
+    ease: Expo.easeInOut
+  })
+
+  TweenMax.from(".bottomnav ul li:nth-child(1)", 1, {
+    delay: 2,
+    x: 20,
+    opacity: 0,
+    ease: Expo.easeInOut
+  })
+
+  TweenMax.from(".bottomnav ul li:nth-child(2)", 1, {
+    delay: 2,
+    x: -20,
+    opacity: 0,
+    ease: Expo.easeInOut
+  })
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    savedTasks.forEach(task => addTaskToTable(task));
+  });
+  
+
+  // Listen for click event on add task button
+  const addTaskBtn = document.getElementById('add-task-btn');
+  addTaskBtn.addEventListener('click', function() {
+    const taskInput = document.getElementById('task-input');
+    const task = taskInput.value;
+    if (task.trim() !== '') {
+      addTaskToTable(task);
+      saveTasksToLocalStorage(); // Save tasks to local storage
+      taskInput.value = '';
+    }
+  });
+
+// Function to add task to the table
+function addTaskToTable(task) {
+    const tableBody = document.getElementById('table-body');
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+      <td>${tableBody.children.length + 1}</td>
+      <td>${task}</td>
+      <td>-</td>
+      <td>-</td>
+    `;
+    tableBody.appendChild(newRow);
+  }
+
+
+  // Function to save tasks to local storage
+function saveTasksToLocalStorage() {
+    const tableRows = document.querySelectorAll('#table-body tr');
+    const tasks = [];
+    tableRows.forEach(row => {
+      tasks.push(row.children[1].textContent);
+    });
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
+
+  // Listen for click event on delete saved tasks button
+const deleteTasksBtn = document.getElementById('delete-tasks-btn');
+deleteTasksBtn.addEventListener('click', function() {
+  localStorage.removeItem('tasks');
+  const tableBody = document.getElementById('table-body');
+  tableBody.innerHTML = ''; // Clear the table
+});
+  </script>
+
+</body>
+
+</html>
