@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function fetchWeatherData(location) {
-    const apiKey = 'c95a091d5686adf965d9961911d6c3cb'; // Replace with your API key from a weather service provider
+    const apiKey = ''; // Replace with your API key from a weather service provider
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(location)}&appid=${apiKey}&units=metric`;
 
     fetch(apiUrl)
@@ -51,7 +51,7 @@ function displayWeather(data) {
 }
 
 function fetchHourlyWeatherData(location) {
-    const apiKey = 'c95a091d5686adf965d9961911d6c3cb'; // Replace with your OpenWeatherMap API key
+    const apiKey = ''; // Replace with your OpenWeatherMap API key
     const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(location)}&appid=${apiKey}`;
 
     fetch(apiUrl)
