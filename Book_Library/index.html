@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Book Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#history">Borrowing History</a></li>
+          <li><a href="#add-book">Add Book</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <h1>Welcome to Your Book Library</h1>
+        <input type="text" id="search-bar" placeholder="Search for books..." />
+        <div id="book-list" class="book-list"></div>
+      </section>
+
+      <section id="categories">
+        <h2>Categories</h2>
+        <ul id="category-list">
+          <!-- Categories will be dynamically populated here -->
+        </ul>
+      </section>
+
+      <section id="history">
+        <h2>Borrowing History</h2>
+        <ul id="history-list">
+          <!-- Borrowing history will be dynamically populated here -->
+        </ul>
+      </section>
+
+      <section id="add-book">
+        <h2>Add a New Book</h2>
+        <form id="add-book-form">
+          <input type="text" id="book-title" placeholder="Title" required />
+          <input type="text" id="book-author" placeholder="Author" required />
+          <input
+            type="text"
+            id="book-category"
+            placeholder="Category"
+            required
+          />
+          <input type="text" id="book-cover" placeholder="Cover Image URL" />
+          <button type="submit">Add Book</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
