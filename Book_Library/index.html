@@ -8,13 +8,41 @@
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
+      <nav class="navbar">
+        <div class="navbar-brand">LIBRARY</div>
+        <ul class="navbar-nav">
           <li><a href="#home">Home</a></li>
-          <li><a href="#categories">Categories</a></li>
-          <li><a href="#history">Borrowing History</a></li>
-          <li><a href="#add-book">Add Book</a></li>
+          <li><a href="#my-books">My Books</a></li>
+          <li class="dropdown">
+            <a href="#browse" class="dropbtn">Browse</a>
+            <div class="dropdown-content">
+              <a href="#subjects">Subjects</a>
+              <a href="#trending">Trending</a>
+              <a href="#library-explorer">Library Explorer</a>
+              <a href="#lists">Lists</a>
+              <a href="#collections">Collections</a>
+              <a href="#k12-student-library">K-12 Student Library</a>
+              <a href="#book-talks">Book Talks</a>
+              <a href="#random-book">Random Book</a>
+              <a href="#advanced-search">Advanced Search</a>
+            </div>
+          </li>
+          <li><a href="#login">Log In</a></li>
+          <li><a href="#sign-up">Sign Up</a></li>
         </ul>
+        <div class="search-container">
+          <select id="search-category">
+            <option value="all">All</option>
+            <option value="books">Books</option>
+            <option value="authors">Authors</option>
+            <option value="authors">Texts</option>
+            <option value="authors">Subjects</option>
+            <option value="authors">Lists</option>
+            <option value="authors">Advanced</option>
+          </select>
+          <input type="text" placeholder="Search.." />
+          <button type="submit">Search</button>
+        </div>
       </nav>
     </header>
 
