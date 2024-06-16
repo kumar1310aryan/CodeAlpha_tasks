@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", () => {
   const bookList = document.getElementById("book-list");
   const categoryList = document.getElementById("category-list");
