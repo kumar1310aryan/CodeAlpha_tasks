@@ -75,3 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   displayCategories();
   displayHistory();
 });
+
+function logout() {
+  window.location.href = "Login_signup/index.html";
+}

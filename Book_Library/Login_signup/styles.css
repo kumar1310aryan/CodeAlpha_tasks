@@ -442,3 +442,9 @@ input::placeholder {
   justify-content: center;
   align-items: center;
 }
+
+.message {
+  text-align: center;
+  margin: 10px 0;
+  color: green;
+}

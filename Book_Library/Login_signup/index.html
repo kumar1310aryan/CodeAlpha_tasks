@@ -10,15 +10,25 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+          <form action="#" class="sign-in-form" id="sign-in-form">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" required />
+              <input
+                type="text"
+                placeholder="Username"
+                id="signin-username"
+                required
+              />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" required />
+              <input
+                type="password"
+                placeholder="Password"
+                id="signin-password"
+                required
+              />
             </div>
             <input type="submit" value="Login" class="btn solid" />
             <p class="social-text">Or Sign in with social platforms</p>
@@ -40,19 +50,34 @@
               Don't have an account? <a href="#" id="sign-up-link">Sign up</a>
             </p>
           </form>
-          <form action="#" class="sign-up-form">
+          <form action="#" class="sign-up-form" id="sign-up-form">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" required />
+              <input
+                type="text"
+                placeholder="Username"
+                id="signup-username"
+                required
+              />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" required />
+              <input
+                type="email"
+                placeholder="Email"
+                id="signup-email"
+                required
+              />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" required />
+              <input
+                type="password"
+                placeholder="Password"
+                id="signup-password"
+                required
+              />
             </div>
             <input type="submit" class="btn" value="Sign up" />
             <p class="social-text">Or Sign up with social platforms</p>
@@ -77,6 +102,10 @@
               One of us? <a href="#" id="sign-in-link">Sign in</a>
             </p>
           </form>
+          <div id="auth-message" class="message"></div>
+          <button id="logout-btn" class="btn" style="display: none">
+            Logout
+          </button>
         </div>
       </div>
     </div>
