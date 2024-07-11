@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Paperback Paradise</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:700|Roboto:400,400i,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="branding">
+        <div class="container-fluid position-relative py-3">
+          <div class="logo-wrapper">
+            <div class="site-logo">
+              <a class="navbar-brand" href="index.html"
+                ><img
+                  class="logo-icon me-2"
+                  src="assets/images/site-logo.svg"
+                  alt="logo"
+                /><span class="logo-text">Paperback Paradise</span></a
+              >
+            </div>
+          </div>
+          <!--//docs-logo-wrapper-->
+        </div>
+        <!--//container-->
+      </div>
+      <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <section class="hero-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-7 pt-5 mb-5 align-self-center">
+            <div class="promo pe-md-3 pe-lg-5">
+              <h1 class="headline mb-3">
+                <font size="7">
+                  Welcome to Paperback Paradise - Your Literary Oasis</font
+                >
+              </h1>
+
+              <!--//headline-->
+              <div class="subheadline mb-4">
+                Paperback Paradise is a community-driven book library where book
+                lovers can borrow, read, and share their favorite titles.
+              </div>
+              <!--//subheading-->
+
+              <div class="cta-holder row gx-md-3 gy-3 gy-md-0">
+                <div class="col-12 col-md-auto">
+                  <a
+                    class="btn btn-primary w-100"
+                    href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devbook-free-bootstrap-5-book-ebook-landing-page-template-for-developers/"
+                    >Explore Our Collection</a
+                  >
+                </div>
+                <div class="col-12 col-md-auto">
+                  <button
+                    class="btn btn-secondary scrollto w-100"
+                    onclick="loginn()"
+                  >
+                    Login
+                  </button>
+                </div>
+              </div>
+              <!--//cta-holder-->
+
+              <div class="hero-quotes mt-5">
+                <div
+                  id="quotes-carousel"
+                  class="quotes-carousel carousel slide carousel-fade mb-5"
+                  data-bs-ride="carousel"
+                  data-bs-interval="8000"
+                >
+                  <div class="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#quotes-carousel"
+                      data-bs-slide-to="0"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#quotes-carousel"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#quotes-carousel"
+                      data-bs-slide-to="2"
+                      aria-label="Slide 3"
+                    ></button>
+                  </div>
+
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <blockquote class="quote p-4 theme-bg-light">
+                        "Paperback Paradise is a true gem in our community! The
+                        selection of books is incredible, and the staff is
+                        always so friendly and helpful. I've been a member for
+                        years and have discovered so many new favorite authors
+                        thanks to the recommendations from the librarians. The
+                        borrowing process is a breeze, and I love being able to
+                        reserve books online. This place is a true oasis for
+                        book lovers like myself."
+                      </blockquote>
+                      <!--//item-->
+                      <div
+                        class="source row gx-md-3 gy-3 gy-md-0 align-items-center"
+                      >
+                        <div
+                          class="col-12 col-md-auto text-center text-md-start"
+                        >
+                          <img
+                            class="source-profile"
+                            src="assets/images/profiles/profile-1.png"
+                            alt="image"
+                          />
+                        </div>
+                        <!--//col-->
+                        <div class="col source-info text-center text-md-start">
+                          <div class="source-name">Michael Jordan</div>
+                          <div class="soure-title">Co-Founder, Novel Nest</div>
+                        </div>
+                        <!--//col-->
+                      </div>
+                      <!--//source-->
+                    </div>
+                    <!--//carousel-item-->
+                    <div class="carousel-item">
+                      <blockquote class="quote p-4 theme-bg-light">
+                        "As a busy parent, I was thrilled to find Paperback
+                        Paradise. The convenient location and flexible return
+                        policy make it easy for me to borrow books and keep up
+                        with my reading. The cozy atmosphere and regular book
+                        club events are an added bonus. My kids also love coming
+                        here to browse the children's section and participate in
+                        the fun activities. Paperback Paradise has truly become
+                        a second home for our family."
+                      </blockquote>
+                      <!--//item-->
+                      <div
+                        class="source row gx-md-3 gy-3 gy-md-0 align-items-center"
+                      >
+                        <div
+                          class="col-12 col-md-auto text-center text-md-start"
+                        >
+                          <img
+                            class="source-profile"
+                            src="assets/images/profiles/profile-2.png"
+                            alt="image"
+                          />
+                        </div>
+                        <!--//col-->
+                        <div class="col source-info text-center text-md-start">
+                          <div class="source-name">Sarah Taylor</div>
+                          <div class="soure-title">
+                            Co-Founder, Startup Week
+                          </div>
+                        </div>
+                        <!--//col-->
+                      </div>
+                      <!--//source-->
+                    </div>
+                    <!--//carousel-item-->
+                    <div class="carousel-item">
+                      <blockquote class="quote p-4 theme-bg-light">
+                        "I recently moved to the area and was worried about
+                        finding a good library, but Paperback Paradise has
+                        exceeded all my expectations. The selection is diverse
+                        and well-curated, and I've discovered so many hidden
+                        gems that I wouldn't have found elsewhere. The online
+                        reservation system is a game-changer, and the staff is
+                        always happy to provide personalized recommendations.
+                        This place is a true haven for book lovers, and I'm so
+                        grateful to have it in our community."
+                      </blockquote>
+                      <!--//item-->
+                      <div
+                        class="source row gx-md-3 gy-3 gy-md-0 align-items-center"
+                      >
+                        <div
+                          class="col-12 col-md-auto text-center text-md-start"
+                        >
+                          <img
+                            class="source-profile"
+                            src="assets/images/profiles/profile-3.png"
+                            alt="image"
+                          />
+                        </div>
+                        <!--//col-->
+                        <div class="col source-info text-center text-md-start">
+                          <div class="source-name">Emily Clarke</div>
+                          <div class="soure-title">Frontend Developer, IBM</div>
+                        </div>
+                        <!--//col-->
+                      </div>
+                      <!--//source-->
+                    </div>
+                    <!--//carousel-item-->
+                  </div>
+                  <!--//carousel-inner-->
+                </div>
+                <!--//quotes-carousel-->
+              </div>
+              <!--//hero-quotes-->
+            </div>
+            <!--//promo-->
+          </div>
+          <!--col-->
+          <div class="col-12 col-md-5 mb-5 align-self-center">
+            <div class="book-cover-holder">
+              <img
+                class="img-fluid book-cover"
+                src="assets/images/library.png"
+                alt="book cover"
+              />
+            </div>
+            <!--//book-cover-holder-->
+            <div class="text-center">
+              <a class="theme-link scrollto" href="#reviews-section"
+                >See all book reviews</a
+              >
+            </div>
+          </div>
+          <!--col-->
+        </div>
+        <!--//row-->
+      </div>
+      <!--//container-->
+    </section>
+    <!--//hero-section-->
+
+    <section
+      id="benefits-section"
+      class="benefits-section theme-bg-light-gradient py-5"
+    >
+      <div class="container py-5">
+        <h2 class="section-heading text-center mb-3">
+          What You'll Get at Paperback Paradise?
+        </h2>
+        <div class="section-intro single-col-max mx-auto text-center mb-5">
+          At Paperback Paradise, we're dedicated to providing our community with
+          a truly exceptional library experience. When you visit our cozy haven,
+          you can expect:
+        </div>
+        <div class="row text-center">
+          <div class="item col-12 col-md-6 col-lg-4">
+            <div class="item-inner p-3 p-lg-4">
+              <div class="item-header mb-3">
+                <div class="item-icon"></div>
+                <h3 class="item-heading">Vast Book Selection</h3>
+              </div>
+              <!--//item-heading-->
+              <div class="item-desc">
+                Explore our ever-expanding collection of over 20,000 titles,
+                spanning a wide range of genres, from classic literature to the
+                latest bestsellers. Whether you're a voracious reader or looking
+                to discover new authors, our shelves are sure to delight.
+              </div>
+              <!--//item-desc-->
+            </div>
+            <!--//item-inner-->
+          </div>
+          <!--//item-->
+          <div class="item col-12 col-md-6 col-lg-4">
+            <div class="item-inner p-3 p-lg-4">
+              <div class="item-header mb-3">
+                <div class="item-icon"></div>
+                <h3 class="item-heading">Personalized Recommendations</h3>
+              </div>
+              <!--//item-heading-->
+              <div class="item-desc">
+                Our friendly and knowledgeable staff are passionate about books
+                and are always eager to provide personalized recommendations
+                tailored to your reading preferences. Let us be your literary
+                guides and help you find your next captivating read.
+              </div>
+              <!--//item-desc-->
+            </div>
+            <!--//item-inner-->
+          </div>
+          <!--//item-->
+          <div class="item col-12 col-md-6 col-lg-4">
+            <div class="item-inner p-3 p-lg-4">
+              <div class="item-header mb-3">
+                <div class="item-icon"></div>
+                <h3 class="item-heading">Convenient Borrowing</h3>
+              </div>
+              <!--//item-heading-->
+              <div class="item-desc">
+                Borrow books with ease through our user-friendly online
+                reservation system. Enjoy flexible return policies and the
+                freedom to explore our collection at your own pace, without the
+                hassle of late fees.
+              </div>
+              <!--//item-desc-->
+            </div>
+            <!--//item-inner-->
+          </div>
+          <!--//item-->
+          <div class="item col-12 col-md-6 col-lg-4">
+            <div class="item-inner p-3 p-lg-4">
+              <div class="item-header mb-3">
+                <div class="item-icon"></div>
+                <h3 class="item-heading">Cozy Atmosphere</h3>
+              </div>
+              <!--//item-heading-->
+              <div class="item-desc">
+                Step into our inviting space and immerse yourself in the
+                comforting ambiance of Paperback Paradise. Curl up in one of our
+                plush reading nooks, browse the shelves, or attend our engaging
+                book club discussions and author events.
+              </div>
+              <!--//item-desc-->
+            </div>
+            <!--//item-inner-->
+          </div>
+          <!--//item-->
+          <div class="item col-12 col-md-6 col-lg-4">
+            <div class="item-inner p-3 p-lg-4">
+              <div class="item-header mb-3">
+                <div class="item-icon"></div>
+                <h3 class="item-heading">Community Connections</h3>
+              </div>
+              <!--//item-heading-->
+              <div class="item-desc">
+                Join our vibrant community of book lovers and make meaningful
+                connections through shared literary interests. Attend our
+                events, participate in discussions, and become part of the
+                Paperback Paradise family.
+              </div>
+              <!--//item-desc-->
+            </div>
+            <!--//item-inner-->
+          </div>
+          <!--//item-->
+          <div class="item col-12 col-md-6 col-lg-4">
+            <div class="item-inner p-3 p-lg-4">
+              <div class="item-header mb-3">
+                <div class="item-icon"></div>
+                <h3 class="item-heading">Unlock New Perspectives</h3>
+              </div>
+              <!--//item-heading-->
+              <div class="item-desc">
+                Reading has the power to broaden our horizons and inspire us to
+                see the world in new ways. At Paperback Paradise, we ensure that
+                you have access to diverse perspectives, encouraging you to step
+                outside your comfort zone.
+              </div>
+              <!--//item-desc-->
+            </div>
+            <!--//item-inner-->
+          </div>
+          <!--//item-->
+        </div>
+        <!--//row-->
+      </div>
+      <!--//container-->
+    </section>
+    <!--//benefits-section-->
+
+    <section id="content-section" class="content-section">
+      <div class="container">
+        <div class="single-col-max mx-auto">
+          <h2 class="section-heading text-center mb-5">What's Included</h2>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="figure-holder mb-5">
+                <img
+                  class="img-fluid"
+                  src="assets/images/devices.png"
+                  alt="image"
+                />
+              </div>
+              <!--//figure-holder-->
+            </div>
+            <!--//col-->
+            <div class="col-12 col-md-6 mb-5">
+              <div class="key-points mb-4 text-center">
+                <ul
+                  class="key-points-list list-unstyled mb-4 mx-auto d-inline-block text-start"
+                >
+                  <li>
+                    <i class="fas fa-check-circle me-2"></i> Access to our
+                    digital library of eBooks
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle me-2"></i>Borrow from our
+                    growing collection
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle me-2"></i>Paperback editions
+                    of classical titles
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle me-2"></i>Rare and
+                    out-of-print books
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle me-2"></i>Research and
+                    reference materials
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle me-2"></i>Comfortable reading
+                    spaces throughout
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle me-2"></i>
+                    community events
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle me-2"></i>And much more...
+                  </li>
+                </ul>
+              </div>
+              <!--//key-points-->
+            </div>
+            <!--//col-12-->
+          </div>
+          <!--//row-->
+        </div>
+        <!--//single-col-max-->
+      </div>
+      <!--//container-->
+    </section>
+    <!--//content-section-->
+
+    <section id="form-section" class="form-section">
+      <div class="container">
+        <div
+          class="lead-form-wrapper single-col-max mx-auto theme-bg-light rounded p-5"
+        >
+          <h2 class="form-heading text-center">Join Our Reader's Club</h2>
+          <div class="form-intro text-center mb-3">
+            Join our mailing list and be the first to receive a free preview of
+            our latest arrivals! As a member, you'll gain exclusive access to
+            upcoming events, special offers, and personalized book
+            recommendations. Don't miss out on the chance to stay updated with
+            the newest additions to our collection and enhance your reading
+            experience.
+          </div>
+          <div class="form-wrapper mx-auto">
+            <form class="signup-form row g-2 align-items-center">
+              <div class="col-12 col-lg-9">
+                <label class="sr-only" for="semail">Email</label>
+                <input
+                  type="email"
+                  id="semail"
+                  name="semail1"
+                  class="form-control me-md-1 semail"
+                  placeholder="Your email"
+                />
+              </div>
+              <div class="col-12 col-lg-3">
+                <button type="submit" class="btn btn-primary btn-submit w-100">
+                  Send
+                </button>
+              </div>
+            </form>
+            <!--//signup-form-->
+          </div>
+          <!--//form-wrapper-->
+        </div>
+        <!--//lead-form-wrapper-->
+      </div>
+      <!--//container-->
+    </section>
+    <!--//form-section-->
+
+    <section id="reviews-section" class="reviews-section py-5">
+      <div class="container">
+        <h2 class="section-heading text-center">Member Experiences</h2>
+        <div class="section-intro text-center single-col-max mx-auto mb-5">
+          See what our readers are saying.
+        </div>
+        <div class="row justify-content-center">
+          <div class="item col-12 col-lg-4 p-3 mb-4">
+            <div class="item-inner theme-bg-light rounded p-4">
+              <blockquote class="quote">
+                "Paperback Paradise is my go-to spot for discovering new
+                favorite reads. The selection is unbeatable!"
+              </blockquote>
+              <!--//item-->
+              <div class="source row gx-md-3 gy-3 gy-md-0">
+                <div class="col-12 col-md-auto text-center text-md-start">
+                  <img
+                    class="source-profile"
+                    src="assets/images/profiles/profile-1.png"
+                    alt="image"
+                  />
+                </div>
+                <!--//col-->
+                <div class="col source-info text-center text-md-start">
+                  <div class="source-name">James Doe</div>
+                  <div class="soure-title">Co-Founder, Startup Week</div>
+                </div>
+                <!--//col-->
+              </div>
+              <!--//source-->
+              <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+            </div>
+            <!--//inner-->
+          </div>
+          <!--//item-->
+          <div class="item col-12 col-lg-4 p-3 mb-4">
+            <div class="item-inner theme-bg-light rounded p-4">
+              <blockquote class="quote">
+                "The community-driven aspect of Paperback Paradise makes it feel
+                like a true literary haven."
+              </blockquote>
+              <!--//item-->
+              <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+                <div class="col-12 col-md-auto text-center text-md-start">
+                  <img
+                    class="source-profile"
+                    src="assets/images/profiles/profile-2.png"
+                    alt="image"
+                  />
+                </div>
+                <!--//col-->
+                <div class="col source-info text-center text-md-start">
+                  <div class="source-name">Jean Doe</div>
+                  <div class="soure-title">Co-Founder, Company Tristique</div>
+                </div>
+                <!--//col-->
+              </div>
+              <!--//source-->
+
+              <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+            </div>
+            <!--//inner-->
+          </div>
+          <!--//item-->
+          <div class="item col-12 col-lg-4 p-3 mb-4">
+            <div class="item-inner theme-bg-light rounded p-4">
+              <blockquote class="quote">
+                "I love the friendly staff and cozy atmosphere. It's the perfect
+                place to get lost in a book."
+              </blockquote>
+              <!--//item-->
+              <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+                <div class="col-12 col-md-auto text-center text-md-start">
+                  <img
+                    class="source-profile"
+                    src="assets/images/profiles/profile-3.png"
+                    alt="image"
+                  />
+                </div>
+                <!--//col-->
+                <div class="col source-info text-center text-md-start">
+                  <div class="source-name">Tom Doe</div>
+                  <div class="soure-title">Product Designer, Company Lorem</div>
+                </div>
+                <!--//col-->
+              </div>
+              <!--//source-->
+              <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+            </div>
+            <!--//inner-->
+          </div>
+          <!--//item-->
+          <div class="item col-12 col-lg-4 p-3 mb-4">
+            <div class="item-inner theme-bg-light rounded p-4">
+              <blockquote class="quote">
+                "From kids' books to bestsellers, Paperback Paradise has
+                something for everyone in my family."
+              </blockquote>
+              <!--//item-->
+              <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+                <div class="col-12 col-md-auto text-center text-md-start">
+                  <img
+                    class="source-profile"
+                    src="assets/images/profiles/profile-4.png"
+                    alt="image"
+                  />
+                </div>
+                <!--//col-->
+                <div class="col source-info text-center text-md-start">
+                  <div class="source-name">Alice Doe</div>
+                  <div class="soure-title">App Developer, Company Ipsum</div>
+                </div>
+                <!--//col-->
+              </div>
+              <!--//source-->
+              <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+            </div>
+            <!--//inner-->
+          </div>
+          <!--//item-->
+          <div class="item col-12 col-lg-4 p-3 mb-4">
+            <div class="item-inner theme-bg-light rounded p-4">
+              <blockquote class="quote">
+                "The online reservation system is so convenient. I always find
+                what I'm looking for!"
+              </blockquote>
+              <!--//item-->
+              <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+                <div class="col-12 col-md-auto text-center text-md-start">
+                  <img
+                    class="source-profile"
+                    src="assets/images/profiles/profile-5.png"
+                    alt="image"
+                  />
+                </div>
+                <!--//col-->
+                <div class="col source-info text-center text-md-start">
+                  <div class="source-name">Sam Doe</div>
+                  <div class="soure-title">Co-Founder, Company Integer</div>
+                </div>
+                <!--//col-->
+              </div>
+              <!--//source-->
+              <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+            </div>
+            <!--//inner-->
+          </div>
+          <!--//item-->
+        </div>
+      </div>
+      <!--//container-->
+    </section>
+    <!--//reviews-section-->
+
+    <section
+      id="author-section"
+      class="author-section section theme-bg-primary py-5"
+    >
+      <div class="container py-3">
+        <div class="author-profile text-center mb-5">
+          <img
+            class="author-pic"
+            src="assets/images/profiles/author-profile.png"
+            alt="image"
+          />
+        </div>
+        <!--//author-profile-->
+        <h2 class="section-heading text-center text-white mb-3">
+          From the Owner
+        </h2>
+        <div class="author-bio single-col-max mx-auto">
+          <p align="center">
+            Welcome to Paperback Paradise! My name is
+            <a
+              class="theme-link"
+              href="http://themes.3rdwavemedia.com"
+              target="_blank"
+              >Xiaoying Riley</a
+            >
+            , and I'm the passionate book lover behind this community-driven
+            library. My journey with books began at a young age, and my love for
+            reading has only grown over the years. With a background in
+            [relevant background, e.g., literature, education, etc.], I decided
+            to create a space where fellow book enthusiasts could come together
+            to share, discover, and celebrate the joy of reading.<br /><br />
+            At Paperback Paradise, we believe in the power of books to transform
+            lives and build communities. Our mission is to provide a diverse and
+            well-curated selection of titles that cater to all interests and age
+            groups. Whether you're looking for the latest bestseller, a classic
+            novel, or a hidden gem, we have something for everyone. <br /><br />
+            Thank you for being a part of our literary oasis. I hope you enjoy
+            exploring our collection and find inspiration in the stories we
+            share.
+          </p>
+          <div class="author-links text-center pt-4">
+            <ul class="social-list list-unstyled">
+              <li class="list-inline-item">
+                <a href="https://twitter.com/3rdwave_themes"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/xriley"
+                  ><i class="fab fa-github-alt"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://medium.com/@3rdwave_themes"
+                  ><i class="fab fa-medium-m"></i
+                ></a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="https://themes.3rdwavemedia.com/"
+                  ><i class="fas fa-globe-europe"></i
+                ></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//author-links-->
+        </div>
+        <!--//author-bio-->
+      </div>
+      <!--//container-->
+    </section>
+    <!--//author-section-->
+
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script>
+      function loginn() {
+        window.location.href = "../Login_signup//index.html";
+      }
+    </script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

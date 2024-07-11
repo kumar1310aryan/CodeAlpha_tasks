@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #f3f3f3;
+    color: #333;
+    padding: 20px;
+}
+
+.support {
+    background-color: #cc0099;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.left-column, .middle-column {
+    width: 25%;
+}
+
+.right-column {
+    width: 35%;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.email-updates, .app-download {
+    display: block;
+    background-color: #ff9900;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.contact {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
+.contact a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
